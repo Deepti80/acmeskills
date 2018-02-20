@@ -80,56 +80,48 @@ if(isset($_REQUEST['id']) && $_REQUEST['id'] != ''){
      width: 160px;
 
 }
+*body{
+	
+}
+*body > img{
+	height:200px;
+	width:200px;
+}
 
 .certificate-box p{
 	
 	margin:0px;}
 </style>
-		<div class="super-main" style="border: 10px double #d42323; border-radius: 0px; background-image:url("logo.jpg");">
-		<div class="main" style="border: 10px double blue; border-radius: 0px;">
-       <table width="100%" class="certificate-box">
-		  <tr>
-			<td width="20%"><h5 style="float:right; margin-left:450px;">SR NO'.$stu_data['sr_no'].'</h5></td>
-			<td width="20%"><h5">ROLL NO '.$stu_data['rollno'].'</h5></td>
-			 </tr>
-			<tr>
-             
-				<td width="60%"><h1 style="margin-left:250px; color:blue;font-size:40px;margin-top:50px; width:80%;border-radius:800;">ACME SKILL LLP</h1> </td>
-			</tr>
-		   <tr>
-			<td><img style="height:100px;width:150px;margin-top:-300px;margin-left:40px;" src="logo.jpg"></td>
-			<td style="width:80%;">
-			  <h6 style="line-height:2; font-size=20px;">(REGD NO. AAI-9849)<br>FORMERLY KNOWN AS
 		
-			  <br>AICE(ARORA INSTITUTE OF COMPUTER EDUCATION)</h6><h2>CERTIFICATE</h2></td>
-			   <div class="form_detail" style="line-height:2;">
-					<p>This is to Certified that <input class="hh" type="text" name="firstname" value="'.ucwords($stu_data['name']).'">
+		<div class="main" style="border: 10px double blue; border-radius: 0px;">
+       <div width="100%" class="certificate-box">
+		  
+			<h5 style="float:right; margin-left:450px;">SR NO'.$stu_data['sr_no'].'</h5>
+			<h5">ROLL NO '.$stu_data['rollno'].'</h5>
+			 
+				<img style=" width: 90%;margin-left:50px;" src="capture1.jpg">
+				<img style=" width: 150px; height:180px; margin-top: -130px;margin-left: 400px;" src="logonew.jpg">
 			
-					S/o / D/o / W/o <input type="text" name="firstname" value="'.ucwords($stu_data['father_name']).'"> has sucessfully completed a Regular Course Titled
-					 <input type="text" name="firstname" value="'.ucwords($stu_data['course_name']).'"> consisting of <input type="text" name="firstname" value="'.ucwords($stu_data['duration']).'">
+			   <div class="form_detail" style="line-height:2;">
+					<p>This is to certify that <input class="hh" type="text" name="firstname" value="'.ucwords($stu_data['name']).'">
+			
+					S/o / D/o / W/o  Sh. <input type="text" name="firstname" value="'.ucwords($stu_data['father_name']).'"> 
+					having qualified in final examination as a regular course trainee from our authorized training centre
+					 <input type="text" name="firstname" value="'.ucwords($stu_data['course_name']).'"> under the management of <strong >Acme Skills Llp. Regd. By Ministry of Corporate Affairs, Govt. of India,</strong> has successfully completed with proficiency 
+<strong>DIPLOMA IN COMPUTER APPLICATION(DCA) of ONE YEAR </strong> duration with grade <input type="text" name="firstname" value="'.ucwords($stu_data['duration']).'">
 					from <input type="text" name="firstname" value="'.showDate($stu_data['start_date']).'">
 					at <input type="text" name="firstname" value="'.ucwords($stu_data['study_center']).'">center.</p>
 					<p> HE/She Secured <input type="text" name="firstname" value="'.ucwords($stu_data['grade']).'">grade.</p><br>
-					<h6 style="font-size:20; margin-top:-200px; margin-left:10px; color:blue;">FOLLOWING SUBJECTS IN TRAINING WITH THEORY & PRACTICALS</h6>
-					<p style="font-size:15px; margin-left:10px;">SEMESTER I : Computer Fundamental,Basic Concept of Hardware & software,MS Office 2010, MS Access, Internet</p>
-
-					<p style="font-size:15px; margin-left:10px;">SEMESTER II: Tally ERP,C,C++,Photoshop,Corel Draw,Page Maker,software Installation,Virus Prot
-			 
+					
+		     <h5 style="margin-left:20px";> DATE '.date('m-d-Y').'</h5>
 			
-		  </tr>
-		  </tr>
-
-		  <tr>
-		    <td> <h5 style="margin-left:20px";> DATE '.date('m-d-Y').'</h5> </td>
-			<td  align="right">
 			  <div class="signature-box"><img src="images/signature.png"></div>
 			<p> Signature </p>
-			</td>
-		  </tr>
+			
 		   </div>
 		  </div>
 		  </div>
-		</table>
+		
 		
 
 		 ';
@@ -146,7 +138,7 @@ if(isset($_REQUEST['id']) && $_REQUEST['id'] != ''){
 	$dompdf->loadHtml($content);
 	
 	// (Optional) Setup the paper size and orientation
-	$dompdf->setPaper('A4', 'portrait');
+	$dompdf->setPaper('A4', 'landscape');
 	$customPaper = array(0,0,736,1000);
 	$dompdf->set_paper($customPaper);
 	// Render the HTML as PDF

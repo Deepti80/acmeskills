@@ -24,15 +24,14 @@ h6{
 form.main{
 	
 	margin-left: 200px;
-	border: 10px double #d42323;
+	border: 10px solid #521c1c;
 	border-radius:5px;
 	font-size:25px;
 	width:1000px; line-height:2;
-	height:1400px;
-	background-image: logo.jpg;
+	height:1000px; 
 }
 p.form_detail{
-	margin-top:40px;
+	margin-top: -10px;
 	margin-left: 50px;
      width:900px; 
 	height:400px; 
